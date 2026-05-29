@@ -1012,7 +1012,7 @@ function PageContacto() {
                 <h3 style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 28, fontWeight: 500, color: "#0A0F1C", margin: "0 0 24px" }}>Datos de contacto</h3>
                 <div style={{ borderTop: "1px solid rgba(0,0,0,0.06)", paddingTop: 24 }}>
                   {[
-                    { label: "Dirección", value: "Av. Alonso de Córdoba 2860, Oficina 603" },
+                    { label: "Dirección", value: "Av. Santa Maria 5888, Vitacura" },
                     { label: "Teléfono", value: "+56 9 8340 6060" },
                     { label: "Email", value: "info@santaregina.cl" },
                     { label: "LinkedIn", value: "linkedin.com/company/santaregina" },
