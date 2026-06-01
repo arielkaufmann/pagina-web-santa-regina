@@ -319,9 +319,9 @@ function PageNosotros() {
           </div></FadeIn>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 32, justifyItems: "center" }}>
             {[
-              { name: "Ariel Kaufmann", role: "Gerente de Inversiones" },
-              { name: "Cristóbal Arbizu", role: "Portfolio Manager" },
-              { name: "Vicente Rodríguez", role: "Portfolio Manager" },
+                { name: "Ariel Kaufmann", role: "Gerente de Inversiones", linkedin: "https://www.linkedin.com/in/ariel-kaufmann-gottlieb-211a2349/" },
+              { name: "Cristóbal Arbizu", role: "Portfolio Manager", linkedin: "http://linkedin.com/in/cristobal-arbizu-b793231a6/" },
+              { name: "Vicente Rodríguez", role: "Portfolio Manager", linkedin: "https://www.linkedin.com/in/vicente-rodr%C3%ADguez-zaror-5765b9199/" },
               { name: "Vicente Banduc", role: "Investment Analyst Intern" },
             ].map((m, idx) => (
               <FadeIn key={idx} delay={idx * 0.12}>
@@ -334,7 +334,15 @@ function PageNosotros() {
                     <span style={{ fontFamily: "'Cormorant Garamond', serif", fontSize: 28, fontWeight: 500, color: ACCENT }}>{m.name.split(" ").map(w => w[0]).join("")}</span>
                   </div>
                   <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 16, fontWeight: 600, color: "#0A0F1C", marginBottom: 4 }}>{m.name}</div>
-                  <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 13, color: "#999", fontWeight: 300 }}>{m.role}</div>
+                  <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 13, color: "#999", fontWeight: 300, marginBottom: m.linkedin ? 10 : 0 }}>{m.role}</div>
+                  {m.linkedin && (
+                    <a href={m.linkedin} target="_blank" rel="noopener noreferrer" title="LinkedIn" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: 30, height: 30, borderRadius: "50%", background: `${AL}0.08)`, border: `1px solid ${AL}0.15)`, transition: "all 0.2s", textDecoration: "none" }}
+                      onMouseEnter={e => { e.currentTarget.style.background = `${AL}0.18)`; e.currentTarget.style.borderColor = ACCENT; }}
+                      onMouseLeave={e => { e.currentTarget.style.background = `${AL}0.08)`; e.currentTarget.style.borderColor = `${AL}0.15)`; }}
+                    >
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill={ACCENT}><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                    </a>
+                  )}
                 </div>
               </FadeIn>
             ))}
@@ -1013,7 +1021,7 @@ function PageContacto() {
                 <div style={{ borderTop: "1px solid rgba(0,0,0,0.06)", paddingTop: 24 }}>
                   {[
                     { label: "Dirección", value: "Av. Santa Maria 5888, Vitacura" },
-                    { label: "Teléfono", value: "+56 9 8340 6060" },
+                    { label: "Teléfono", value: "+569 9887 8723" },
                     { label: "Email", value: "info@santaregina.cl" },
                     { label: "LinkedIn", value: "linkedin.com/company/santaregina" },
                   ].map((item, i) => (
